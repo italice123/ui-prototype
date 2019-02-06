@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ระบบ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="../css/login.css" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.ico" type="image/ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="picture">
+        <center>
+            <img src="../../picture/logo.png" style="width:320px; ">
+        </center>
+    </div>
+    <div class="wrapper" style="margin-top: 15px;">
+        <form class="form-signin" style="padding-top:0px;">
+            <center>
+                <h1 id="head">
+                </h1>
+            </center>
+            <p id="text">
+                <b>ชื่อผู้ใช้งาน</b>
+            </p>
+            <input id = "text" type="text" class="form-control" name="username" placeholder="" required="" autofocus="" style="height: 44px;" />
+            <br>
+            <p id="text">
+                <b>รหัสผ่าน</b>
+            </p>
+            <input id = "text" type="password" class="form-control" name="password" placeholder="" required="" autofocus="" style="height: 44px;" />
+            <center>
+                    <button class=" btn-warning btn btn-lg btn-primary btn-block" type="submit" style="margin-top:10%;margin-bottom: 10%;">เข้าสู่ระบบ</button>
+            </center>
+            <div class="col-md-1 "></div>
+            <div class="col-md-4 " style="text-align: center;">
+            <a href="create_user.html" style="margin-top:10px;" id="text" >สร้างผู้ใช้งาน</a>
+            </div>
+            <div class="col-md-2 "></div>
+            <div class="col-md-4 " style="text-align: center;">
+            <a href="forgot.html" style="margin-top:10px;" id="text">ลืมรหัสผ่าน</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+<!--<footer class="container-fluid text-center">
+    <p>Footer Text</p>
+</footer>
+</html>
