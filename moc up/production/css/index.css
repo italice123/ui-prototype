@@ -1,6 +1,7 @@
 body{
     font-family: 'supermarketregular', 'supermarketregular';
     font-size: 150% !important;
+    background-color: unset;
 }
 .h4, h4 {
     font-size: 22px;
@@ -327,4 +328,27 @@ input{
     background-color: #fff;
     height: 1px;
     margin: 20px 0;
+}
+.left_col{
+    background-color: #32847d;
+}
+.nav_title {
+    background-color: #32847d;
+}
+.nav.side-menu>li>a{
+    font-size: 150%;
+    color: #000000 !important;
+}
+.nav.side-menu>li>a:hover{
+    background-color: #07635b;
+    color: #000000 !important;
+}
+.navbar-brand, .navbar-nav>li>a, .site_title {
+    color: #000000 !important;
+}
+.nav-sm .nav.side-menu li a {
+    text-align: center !important;
+    font-weight: 400;
+    font-size: 100%;
+    padding: 10px 5px;
 }
