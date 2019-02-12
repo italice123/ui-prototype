@@ -30,9 +30,6 @@
         <div class="main_container">
             <div class="col-md-3 left_col menu_fixed">
                 <div class="left_col scroll-view">
-                    <div class="navbar nav_title" style="border: 0;">
-                        <a href="้home.html" class="site_title"><i class="fa fa-paw"></i> <span>---ระบบ---</span></a>
-                    </div>
 
                     <div class="clearfix"></div>
 
@@ -53,19 +50,22 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <ul class="nav side-menu">
-                                <li><a><i class="fa fa-home"></i> ข่าวสาร </a>
+                                <li style="background-color: #15927a;"><a href="home.html"><i class="fa fa-home"></i>
+                                        ข่าวสาร </a>
                                 </li>
-                                <li><a><i class="fa fa-edit"></i> ประวัติผู้ใช้ </a>
+                                <li><a href="user.html"><i class="fa fa-user"></i> ประวัติผู้ใช้ </a>
                                 </li>
-                                <li><a><i class="fa fa-desktop"></i> ผู้ลงสมัครเลือกตั้ง </a>
+                                <li><a href="candidate.html"><i class="fa fa-group"></i> ผู้ลงสมัครเลือกตั้ง </a>
                                 </li>
-                                <li><a><i class="fa fa-table"></i> งานบริการ </a>
+                                <li><a href="search.html"><i class="fa fa-search"></i> ตรวจสอบพื้นที่เขตเลือกตั้ง </a>
                                 </li>
-                                <li><a><i class="fa fa-bar-chart-o"></i> งานเอกสาร </a>
+                                <li><a href="service.html"><i class="fa fa-wrench"></i> งานบริการ </a>
                                 </li>
-                                <li><a><i class="fa fa-clone"></i>คู่มือการใช้งาน </a>
+                                <li><a href="doc.html"><i class="fa fa-file"></i> งานเอกสาร </a>
                                 </li>
-                                <li><a><i class="fa fa-clone"></i>การตั้งค่า </a>
+                                <li><a href="howto.html"><i class="fa fa-book"></i>คู่มือการใช้งาน </a>
+                                </li>
+                                <li><a href="setting.html"><i class="fa fa-cog"></i>การตั้งค่า </a>
                                 </li>
                             </ul>
                         </div>
@@ -83,13 +83,14 @@
                         </div>
 
                         <ul class="nav navbar-nav navbar-right">
-                                <li><a href="../login/login.html"><i class="fa fa-sign-out pull-right"></i> ออกจากระบบ</a></li>
-                            <li class="">
+                            <li><a href="../login/login.html"><i class="fa fa-sign-out pull-right"></i> ออกจากระบบ</a>
+                            </li>
+                            <!-- <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                     aria-expanded="false">
                                     <img src="../../picture/user.png" alt="" style="color:#000000;">ขยัน เก่งทำงาน
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </nav>
                 </div>
@@ -102,10 +103,37 @@
                     <div class="row">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h1>ชื่อเพจ</h1>
+                                <h1>ข่าวสาร</h1>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content" style="font-size:150%;">
+                                <div class="col-md=12">
+                                    <div class="textHome">
+                                        <p style="text-align:right;"><b>
+                                                <a class="howto" href="howto.html"> ระเบียบและข้อบังคับการใช้งาน</i></a>
+                                                |
+                                                <a class="howto" href="howto.html"> รายงานปัญหา</i></a>
+                                            </b></p>
+                                    </div>
+                                    <h3>การแจ้งเตือน</h3>
+                                    <div class="ln_solid"></div>
+                                    <div class="">
+                                        <i class="fa fa-circle col-md-1 icon_style"></i>
+                                        <p><b><a class="alert" href="pdf_show.html"> อัพเดทเอกสารใหม่</i></a></b></p>
+                                        <i class="fa fa-circle col-md-1 icon_style"></i>
+                                        <p><b><a class="alert" href="user.html"> ข้อมูลส่วนตัวได้รับการอนุมัติ</i></a></b></p>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                    <br>
+                                    <h3>ข่าวสาร</h3>
+                                    <div class="ln_solid"></div>
+                                    <div class="">
+                                        <i class="fa fa-circle col-md-1 icon_style"></i>
+                                        <p><b><a class="alert" href="new.html"> ข่าวการเลือกตั้ง</i></a></b></p>
+                                        <i class="fa fa-circle col-md-1 icon_style"></i>
+                                        <p><b><a class="alert" href="new.html"> ไปหาเสียง</i></a></b></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,7 +144,7 @@
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                        Copyright © 2019 
+                    Copyright © 2019
                 </div>
                 <div class="clearfix"></div>
             </footer>

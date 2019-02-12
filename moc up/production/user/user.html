@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ระบบ | </title>
+
+    <!-- Bootstrap -->
+    <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- jQuery custom content scroller -->
+    <link href="../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+    <!-- Custom Theme Style -->
+    <link href="../../build/css/custom.min.css" rel="stylesheet">
+    <!-- edit css by tasto -->
+    <link href="../css/index.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col menu_fixed">
+                <div class="left_col scroll-view">
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="../../picture/user.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span style="color:red;">ยินดีต้อนรับ,</span>
+                            <h2 style="color:red;">ขยัน เก่งทำงาน</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li><a href="home.html"><i class="fa fa-home"></i> ข่าวสาร </a>
+                                </li>
+                                <li style="background-color: #15927a;"><a href="user.html"><i class="fa fa-user"></i> ประวัติผู้ใช้ </a>
+                                </li>
+                                <li><a href="candidate.html"><i class="fa fa-group"></i> ผู้ลงสมัครเลือกตั้ง </a>
+                                </li>
+                                <li><a href="search.html"><i class="fa fa-search"></i> ตรวจสอบพื้นที่เขตเลือกตั้ง </a>
+                                </li>
+                                <li><a href="service.html"><i class="fa fa-wrench"></i> งานบริการ </a>
+                                </li>
+                                <li><a href="doc.html"><i class="fa fa-file"></i> งานเอกสาร </a>
+                                </li>
+                                <li><a href="howto.html"><i class="fa fa-book"></i>คู่มือการใช้งาน </a>
+                                </li>
+                                <li><a href="setting.html"><i class="fa fa-cog"></i>การตั้งค่า </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                                <li><a href="../login/login.html"><i class="fa fa-sign-out pull-right"></i> ออกจากระบบ</a></li>
+                            <!-- <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="../../picture/user.png" alt="" style="color:#000000;">ขยัน เก่งทำงาน
+                                </a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="row">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <div class="col-md=12">
+                                <a href="edit_user.html"><p class="edit_text" style="text-align:right;">แก้ไข</p></a>
+                                </div>
+                                <h1>ประวัติส่วนตัว</h1>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" style="font-size:150%;">
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CardId">หมายเลขบัตรประจำตัวประชาชน
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" name="card_id" id="card_id" minlength="13" maxlength="13"
+                                                class="form-control" readonly="readonly" placeholder="1234567890000">
+                                            <!-- <input type="number" required="required" class="form-control"></textarea> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">ชื่อ
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="ชยัน">
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="LName">นามสกุล
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="เก่งทำงาน">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">ศาสนา
+                                        </label>
+                                        <div class="col-md-2 col-sm-9 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="พุทธ">
+
+                                        </div>
+                                        <label class="control-label col-md-2 col-sm-3 col-xs-12">วัน/เดือน/ปี เกิด
+                                        </label>
+                                        <div class="col-md-3 col-sm-5 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="32/12/2561">
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="form-group" id="buildyourform">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">เบอร์โทรศัพท์
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <input type="number" class="form-control" readonly="readonly" placeholder="0999999999">
+                                        </div>
+                                        <br><br> 
+                                    </div>
+
+                                    <br>
+                                    <h3 class=" col-md-4 col-sm-3 col-xs-12">ข้อมูลที่อยู่</h3><br>
+                                    <div class="ln_solid"></div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div id="gender" class="btn-group">
+                                                <label>
+                                                    <input type="radio" name="gender" value="" checked > &nbsp; บ้าน &nbsp;
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="gender" value=""  disabled> หอพัก
+                                                    อาพาร์ทเม้นต์
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for=" " >เลขที่
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="111/1">
+                                        </div>
+                                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="">อาคาร/หมู่บ้าน
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="-">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">ชั้น
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="-">
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="">ห้อง
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="-">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">ซอย
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="ลาดกระบัง 1">
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="">ถนน
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="ลาดกระบัง">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">จังหวัด
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="กรุงเทพฯ">
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="LName">อำเภอ/เขต
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="ลาดกระบัง">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">ตำบล/แขวง
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" readonly="readonly" placeholder="ลาดกระบัง">
+                                        </div>
+                                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="LName">รหัสไปรษณีย์
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control"  readonly="readonly" placeholder="10520">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                        Copyright © 2019 
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../../vendors/nprogress/nprogress.js"></script>
+    <!-- jQuery custom content scroller -->
+    <script src="../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../../build/js/custom.min.js"></script>
+</body>
+
+</html>
