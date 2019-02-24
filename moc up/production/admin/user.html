@@ -18,10 +18,6 @@
     <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
     <link href="../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
-    <!-- bootstrap-daterangepicker -->
-    <link href="../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <!-- bootstrap-datetimepicker -->
-    <link href="../../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../../build/css/custom.min.css" rel="stylesheet">
@@ -54,20 +50,19 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <ul class="nav side-menu">
-                                <li><a href="home.html"><i class="fa fa-home"></i> ข่าวสาร </a>
+                                <li><a href="home.html"><i class="fa fa-home"></i> หน้าแรก </a>
                                 </li>
-                                <li style="background-color: #15927a;"><a href="user.html"><i class="fa fa-user"></i>
-                                        ประวัติผู้ใช้ </a>
+                                <li><a href="approve.html"><i class="fa fa-user"></i> การอนุมัติ </a>
                                 </li>
-                                <li><a href="candidate.html"><i class="fa fa-group"></i> ผู้ลงสมัครเลือกตั้ง </a>
+                                <li><a href="political_party.html"><i class="fa fa-group"></i> ข้อมูลพรรค </a>
                                 </li>
-                                <li><a href="search.html"><i class="fa fa-search"></i> ตรวจสอบพื้นที่เขตเลือกตั้ง </a>
+                                <li><a href="candidate.html"><i class="fa fa-search"></i> ผู้ลงสมัครเลือกตั้ง </a>
                                 </li>
-                                <li><a href="service.html"><i class="fa fa-wrench"></i> งานบริการ </a>
+                                <li><a href="location.html"><i class="fa fa-wrench"></i> ข้อมูลพื้นที่เขตเลือกตั้ง </a>
                                 </li>
-                                <li><a href="doc.html"><i class="fa fa-file"></i> งานเอกสาร </a>
+                                <li><a href="news.html"><i class="fa fa-file"></i> ข้อมูลข่าวสาร </a>
                                 </li>
-                                <li><a href="howto.html"><i class="fa fa-book"></i>คู่มือการใช้งาน </a>
+                                <li><a href="doc.html"><i class="fa fa-book"></i>งานเอกสาร </a>
                                 </li>
                                 <li><a href="setting.html"><i class="fa fa-cog"></i>การตั้งค่า </a>
                                 </li>
@@ -108,21 +103,19 @@
                     <div class="row">
                         <div class="x_panel">
                             <div class="x_title">
-                                    <div class="col-md=12">
-                                            <a href="user.html"><p class="edit_text" style="text-align:left;">ย้อนกลับ</p></a>
-                                            </div>
-                                <h1>ประวัติส่วนตัว</h1>
+                                <h1>ชื่อเพจ</h1>
                                 <div class="clearfix"></div>
                             </div>
-                            <div class="x_content" style="font-size:150%;">
+                            <div class="x_content">
                                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="CardId">หมายเลขบัตรประจำตัวประชาชน
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                            for="CardId">หมายเลขบัตรประจำตัวประชาชน
                                             <span class="required">*</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input type="text" name="card_id" id="card_id" minlength="13" maxlength="13"
-                                                class="form-control" placeholder="1234567890000">
+                                                class="form-control" readonly="readonly"placeholder="1234567890000">
                                             <!-- <input type="number" required="required" class="form-control"></textarea> -->
                                         </div>
                                     </div>
@@ -131,20 +124,20 @@
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="ชยัน">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="ชยัน">
                                         </div>
                                         <label class="control-label col-md-1 col-sm-1 col-xs-12" for="LName">นามสกุล
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="เก่งทำงาน">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="เก่งทำงาน">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">ศาสนา
                                         </label>
                                         <div class="col-md-1 col-sm-9 col-xs-12">
-                                            <select class="form-control" style="font-size:100%;">
+                                            <select class="form-control" readonly="readonly"style="font-size:100%;">
                                                 <option value="" selected>พุทธ</option>
                                                 <option value="">คริสต์</option>
                                                 <option value="">อิสลาม</option>
@@ -158,7 +151,8 @@
                                                 <div class='col-sm-6'>
                                                     <div class="form-group">
                                                         <div class='input-group date' id='myDatepicker2'>
-                                                            <input type='text' class="form-control" placeholder="32/12/2561">
+                                                            <input type='text' class="form-control" readonly="readonly"
+                                                                placeholder="32/12/2561">
                                                             <span class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                             </span>
@@ -170,13 +164,13 @@
                                         <br>
                                     </div>
                                     <div class="form-group" id="buildyourform">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">เบอร์โทรศัพท์
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                            for="number">เบอร์โทรศัพท์
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
-                                            <input type="number" class="form-control" placeholder="0999999999">
+                                            <input type="number" class="form-control" readonly="readonly"placeholder="0999999999">
                                         </div>
-                                        <input type="button" value="เพิ่มหมายเลข" class="add" id="add" />
                                         <br><br>
                                     </div>
 
@@ -207,13 +201,14 @@
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="111/1">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="111/1">
                                         </div>
-                                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="LName">อาคาร/หมู่บ้าน
+                                        <label class="control-label col-md-2 col-sm-1 col-xs-12"
+                                            for="LName">อาคาร/หมู่บ้าน
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="-">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="-">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -221,13 +216,13 @@
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="-">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="-">
                                         </div>
                                         <label class="control-label col-md-2 col-sm-1 col-xs-12" for="LName">ห้อง
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="-">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="-">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -235,13 +230,13 @@
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="ลาดกระบัง 1">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="ลาดกระบัง 1">
                                         </div>
                                         <label class="control-label col-md-2 col-sm-1 col-xs-12" for="">ถนน
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="ลาดกระบัง">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="ลาดกระบัง">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -249,7 +244,7 @@
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-9 col-xs-12">
-                                            <select class="form-control" style="font-size:100%;">
+                                            <select class="form-control" readonly="readonly"style="font-size:100%;">
                                                 <option value="" selected>กรุงเทพฯ</option>
                                                 <option value="">กำแพงเพชร</option>
                                                 <option value="">กำแพงเพชร</option>
@@ -263,7 +258,7 @@
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-9 col-xs-12">
-                                            <select class="form-control" style="font-size:100%;">
+                                            <select class="form-control" readonly="readonly"style="font-size:100%;">
                                                 <option value="" selected>ลาดกระบัง</option>
                                                 <option value="">ลำปลาทิว</option>
                                                 <option value="">กำแพงเพชร</option>
@@ -279,7 +274,7 @@
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-9 col-xs-12">
-                                            <select class="form-control" style="font-size:100%;">
+                                            <select class="form-control" readonly="readonly"style="font-size:100%;">
                                                 <option selected>ลาดกระบัง</option>
                                                 <option value="">กำแพงเพชร</option>
                                                 <option value="">กำแพงเพชร</option>
@@ -289,11 +284,12 @@
                                                 <option value="">กำแพงเพชร</option>
                                             </select>
                                         </div>
-                                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="LName">รหัสไปรษณีย์
+                                        <label class="control-label col-md-2 col-sm-1 col-xs-12"
+                                            for="LName">รหัสไปรษณีย์
                                             <span class="required"></span>
                                         </label>
                                         <div class="col-md-2 col-sm-3 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="10520">
+                                            <input type="text" class="form-control" readonly="readonly"placeholder="10520">
                                         </div>
                                     </div>
                                 </form>
@@ -301,9 +297,12 @@
                                     <div class="form-group">
 
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <a href="user.html"> <button class="btn btn-danger btn-danger2" type="button">ยกเลิก</button>
-                                            </a>
-                                            <button type="button" class="btn btn-success btn-success2" style="width:30%; ">บันทึก</button>
+                                            <button class="btn btn-danger btn-danger2"
+                                                type="button" data-toggle="modal"
+                                                data-target="#myModal2">ไม่อนุมัติ</button>
+                                            <button type="button" class="btn btn-success btn-success2"
+                                                style="width:30%; " data-toggle="modal"
+                                                data-target="#myModal3">อนุมัติ</button>
                                         </div>
                                     </div>
                                 </center>
@@ -332,6 +331,54 @@
         </div>
     </div>
 
+    <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                <div class="modal-content" style="background-color: red; color: white;">
+                    <center>
+                        <h1>ไม่อนุมัติ</h1>
+                    </center>
+                        <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fName">เอกสารไม่ได้รับการอนุมัติเนื่องจาก
+                                <span class="required"></span>
+                            </label>
+                            <div class="col-md-12 col-sm-3 col-xs-12">
+                                    <textarea id="message" required="required" class="form-control" style="min-height: 250px;"></textarea>
+                                  </div>
+                                  <br>
+                                  <label class="control-label col-md-12 col-sm-3 col-xs-12" for="fName">หมายเหตุ
+                                        <span class="required"></span>
+                                    </label>
+                                    <div class=" col-md-12 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control" >
+                                          </div>
+                                          <center>
+                        <button class=" btn-lg btn-dark" type="button" style="margin-top:25px;width: 12%" data-dismiss="modal">ยกเลิก</button>
+                        <a href="approve.html">
+                            <button class=" btn-lg btn-success" type="submit" style="margin-top:25px;width: 12%" >ยืนยัน</button>
+                        </a>
+                        </center>
+                </div>
+    
+            </div>
+        </div>
+        <div id="myModal3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+        
+                    <!-- Modal content-->
+                    <div class="modal-content" style="background-color: green; color: white;">
+                        <center>
+                            <i class="fa fa-sign-out" style="font-size: 1000%;margin-top: 5%;"></i>
+                            <h1>อนุมัติเรียบร้อยแล้ว</h1>
+                            <a href="approve.html">
+                                <button class=" btn-lg btn-success" type="submit" style="margin-top:25px;width: 12%">ยืนยัน</button>
+                            </a>
+                        </center>
+                    </div>
+        
+                </div>
+            </div>
+
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
@@ -342,54 +389,6 @@
             <!-- /footer content -->
         </div>
     </div>
-    <script>
-        $('#myDatepicker').datetimepicker();
-
-        $('#myDatepicker2').datetimepicker({
-            format: 'DD/MM/YYYY'
-        });
-
-        $('#myDatepicker3').datetimepicker({
-            format: 'hh:mm A'
-        });
-
-        $('#myDatepicker4').datetimepicker({
-            ignoreReadonly: true,
-            allowInputToggle: true
-        });
-
-        $('#datetimepicker6').datetimepicker();
-
-        $('#datetimepicker7').datetimepicker({
-            useCurrent: false
-        });
-
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-        });
-
-        $("#datetimepicker7").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-        });
-        $(document).ready(function () {
-            $("#add").click(function () {
-                var lastField = $("#buildyourform div:last");
-                var intId = (lastField && lastField.length && lastField.data("idx") + 1) || 1;
-                var fieldWrapper = $("<div class= \"form-group\"> <label class=\"control-label col-md-3 col-sm-3 col-xs-12\">เบอร์โทรศัพท์</label><div class= \"fieldwrapper \" id=\"field" + intId + "\"/ > </div>");
-                fieldWrapper.data("idx", intId);
-                var fName = $("<input type=\"number\" class=\"fieldname\" />");
-                // var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
-                var removeButton = $("<input type=\"button\" class=\"remove\" value=\"ลบ\" />");
-                removeButton.click(function () {
-                    $(this).parent().remove();
-                });
-                fieldWrapper.append(fName);
-                // fieldWrapper.append(fType);
-                fieldWrapper.append(removeButton);
-                $("#buildyourform").append(fieldWrapper);
-            });
-        });
-    </script>
 
     <!-- jQuery -->
     <script src="../../vendors/jquery/dist/jquery.min.js"></script>
@@ -401,61 +400,9 @@
     <script src="../../vendors/nprogress/nprogress.js"></script>
     <!-- jQuery custom content scroller -->
     <script src="../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../../vendors/moment/min/moment.min.js"></script>
-    <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="../../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
     <!-- Custom Theme Scripts -->
     <script src="../../build/js/custom.min.js"></script>
-
-    <script>
-        $('#myDatepicker').datetimepicker();
-
-        $('#myDatepicker2').datetimepicker({
-            format: 'DD/MM/YYYY'
-        });
-
-        $('#myDatepicker3').datetimepicker({
-            format: 'hh:mm A'
-        });
-
-        $('#myDatepicker4').datetimepicker({
-            ignoreReadonly: true,
-            allowInputToggle: true
-        });
-
-        $('#datetimepicker6').datetimepicker();
-
-        $('#datetimepicker7').datetimepicker({
-            useCurrent: false
-        });
-
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-        });
-
-        $("#datetimepicker7").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-        });
-        $(document).ready(function () {
-            $("#add").click(function () {
-                var lastField = $("#buildyourform div:last");
-                var intId = (lastField && lastField.length && lastField.data("idx") + 1) || 1;
-                var fieldWrapper = $("<div class= \"form-group\"> <label class=\"control-label col-md-3 col-sm-3 col-xs-12\">เบอร์โทรศัพท์</label><div class= \"fieldwrapper \" id=\"field" + intId + "\"/ > </div>");
-                fieldWrapper.data("idx", intId);
-                var fName = $("<input type=\"number\" class=\"fieldname\" />");
-                // var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
-                var removeButton = $("<input type=\"button\" class=\"remove\" value=\"ลบ\" />");
-                removeButton.click(function () {
-                    $(this).parent().remove();
-                });
-                fieldWrapper.append(fName);
-                // fieldWrapper.append(fType);
-                fieldWrapper.append(removeButton);
-                $("#buildyourform").append(fieldWrapper);
-            });
-        });
-    </script>
 </body>
 
 </html>
