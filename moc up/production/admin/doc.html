@@ -55,13 +55,13 @@
                             <ul class="nav side-menu">
                                 <li><a href="home.html"><i class="fa fa-home"></i> หน้าแรก </a>
                                 </li>
-                                <li><a href="approve.html"><i class="fa fa-user"></i> การอนุมัติ </a>
+                                <li><a href="approve.html"><i class="fa fa-check-square-o"></i> การอนุมัติ </a>
                                 </li>
                                 <li><a href="political_party.html"><i class="fa fa-group"></i> ข้อมูลพรรค </a>
                                 </li>
-                                <li><a href="candidate.html"><i class="fa fa-search"></i> ผู้ลงสมัครเลือกตั้ง </a>
+                                <li><a href="candidate.html"><i class="fa fa-user"></i> ผู้ลงสมัครเลือกตั้ง </a> 
                                 </li>
-                                <li><a href="location.html"><i class="fa fa-wrench"></i> ข้อมูลพื้นที่เขตเลือกตั้ง </a>
+                                <li><a href="location.html"><i class="fa fa-building"></i> ข้อมูลพื้นที่เขตเลือกตั้ง </a>
                                 </li>
                                 <li><a href="news.html"><i class="fa fa-file"></i> ข้อมูลข่าวสาร </a>
                                 </li>
@@ -138,9 +138,10 @@
                                                         <p style="text-align:center;"><b>
                                                                 <a class="howto" href="view_pdf.html"> ดู</i></a>
                                                                 |
-                                                                <a class="howto" href="view_pdf.html"> แก้ไข</i></a>
+                                                                <a class="howto" href="add_doc.html"> แก้ไข</i></a>
                                                                 |
-                                                                <a class="howto" href="view_pdf.html"> ลบ</i></a>
+                                                                <a class="howto" href="" data-toggle="modal"
+                                                data-target="#myModal2"> ลบ</i></a>
                                                             </b></p>
                                                     </div>
                                                 </td>
@@ -154,9 +155,10 @@
                                                         <p style="text-align:center;"><b>
                                                                 <a class="howto" href="view_pdf.html"> ดู</i></a>
                                                                 |
-                                                                <a class="howto" href="view_pdf.html"> แก้ไข</i></a>
+                                                                <a class="howto" href="add_doc.html"> แก้ไข</i></a>
                                                                 |
-                                                                <a class="howto" href="view_pdf.html"> ลบ</i></a>
+                                                                <a class="howto" href="" data-toggle="modal"
+                                                data-target="#myModal2"> ลบ</i></a>
                                                             </b></p>
                                                     </div>
                                                 </td>
@@ -182,7 +184,7 @@
                     <h1>ทำการยืนยันเพื่อออกจากระบบ</h1>
                     <button class=" btn-lg btn-dark" type="button" style="margin-top:25px;width: 12%" data-dismiss="modal">ยกเลิก</button>
                     <a href="../login/login.html">
-                        <button class=" btn-lg btn-success" type="submit" style="margin-top:25px;width: 12%">ยืนยัน</button>
+                        <button class=" btn-lg btn-success" type="submit" style="margin-top:25px;width: 12%" >ยืนยัน</button>
                     </a>
                 </center>
             </div>
@@ -190,6 +192,37 @@
         </div>
     </div>
 
+    <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                <div class="modal-content" style="background-color: red; color: white;">
+                    <center>
+                        <i class="fa fa-trash" style="font-size: 1000%;margin-top: 5%;"></i>
+                        <h1>ท่านต้องการยืนยันที่จะลบหรือไม่</h1>
+                        <button class=" btn-lg btn-dark" type="button" style="margin-top:25px;width: 12%" data-dismiss="modal">ยกเลิก</button>
+                        <button class=" btn-lg btn-success" type="submit" style="margin-top:25px;width: 12%" data-toggle="modal" data-target="#myModal3">ยืนยัน</button>
+                    </center>
+                </div>
+    
+            </div>
+        </div>
+        <div id="myModal3" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+        
+                    <!-- Modal content-->
+                    <div class="modal-content" style="background-color: red; color: white;">
+                        <center>
+                            <i class="fa fa-trash" style="font-size: 1000%;margin-top: 5%;"></i>
+                            <h1>ลบเรียบร้อยแล้ว</h1>
+                            <a onclick="goBack()">
+                                <button class=" btn-lg btn-success" type="submit" style="margin-top:25px;width: 12%">ยืนยัน</button>
+                            </a>
+                        </center>
+                    </div>
+        
+                </div>
+            </div>
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
@@ -217,6 +250,11 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../../build/js/custom.min.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>

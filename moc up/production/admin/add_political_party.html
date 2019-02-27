@@ -18,6 +18,10 @@
     <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
     <link href="../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- bootstrap-datetimepicker -->
+    <link href="../../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../../build/css/custom.min.css" rel="stylesheet">
@@ -52,13 +56,14 @@
                             <ul class="nav side-menu">
                                 <li><a href="home.html"><i class="fa fa-home"></i> หน้าแรก </a>
                                 </li>
-                                <li><a href="approve.html"><i class="fa fa-user"></i> การอนุมัติ </a>
+                                <li><a href="approve.html"><i class="fa fa-check-square-o"></i> การอนุมัติ </a>
                                 </li>
-                                <li style="background-color: #15927a;"><a href="political_party.html"><i class="fa fa-group"></i> ข้อมูลพรรค </a>
+                                <li style="background-color: #15927a;"><a href="political_party.html"><i
+                                            class="fa fa-group"></i> ข้อมูลพรรค </a>
                                 </li>
-                                <li><a href="candidate.html"><i class="fa fa-search"></i> ผู้ลงสมัครเลือกตั้ง </a>
+                                <li><a href="candidate.html"><i class="fa fa-user"></i> ผู้ลงสมัครเลือกตั้ง </a> 
                                 </li>
-                                <li><a href="location.html"><i class="fa fa-wrench"></i> ข้อมูลพื้นที่เขตเลือกตั้ง </a>
+                                <li><a href="location.html"><i class="fa fa-building"></i> ข้อมูลพื้นที่เขตเลือกตั้ง </a>
                                 </li>
                                 <li><a href="news.html"><i class="fa fa-file"></i> ข้อมูลข่าวสาร </a>
                                 </li>
@@ -82,8 +87,8 @@
                         </div>
 
                         <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="" data-toggle="modal"
-                                data-target="#myModal"><i class="fa fa-sign-out pull-right"></i> ออกจากระบบ</a>
+                            <li><a href="" data-toggle="modal" data-target="#myModal"><i
+                                        class="fa fa-sign-out pull-right"></i> ออกจากระบบ</a>
                             </li>
                             <!-- <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
@@ -103,39 +108,288 @@
                     <div class="row">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h1>ชื่อเพจ</h1>
+                                <h1>ข้อมูลการลงสมัคร</h1>
                                 <div class="clearfix"></div>
                             </div>
-                            <div class="x_content" style="font-size:150%;">
+                            <div class="x_content">
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">ชื่อพรรค
+                                            <span class="required">*</span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div id="test">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                            for="last-name">เลือกรูปโลโก้พรรค
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-6 col-xs-12">
+                                                    <input type="file" id="file" data-role="magic-overlay"
+                                                        data-target="#pictureBtn" data-edit="insertImage"
+                                                        accept=".png,.jpg,.pdf">
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <p>** แนบไฟล์นามสกุล .pdf ขนาดไฟล์ไม่เกิน 5 kb.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="buildyourform">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="text">นโยบายพรรค
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <input type="button" value="เพิ่มนโยบาย" class="add" id="add" />
+                                        <br><br><br>
+                                    </div>
+                                    <br>
+                                    <h3 class=" col-md-4 col-sm-3 col-xs-12">ข้อมูลที่อยู่</h3><br>
+                                    <div class="ln_solid"></div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div id="gender" class="btn-group">
+                                                <label>
+                                                    <input type="radio" name="gender" value="male"> &nbsp; บ้าน &nbsp;
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="gender" value="female"> หอพัก
+                                                    อาพาร์ทเม้นต์
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">เลขที่
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12"
+                                            for="LName">อาคาร/หมู่บ้าน
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">ชั้น
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="LName">ห้อง
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for=" ">ซอย
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="">ถนน
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">จังหวัด
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-9 col-xs-12">
+                                            <select class="form-control" style="font-size:100%;">
+                                                <option value="">กรุงเทพฯ</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                            </select>
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="LName">อำเภอ/เขต
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-9 col-xs-12">
+                                            <select class="form-control" style="font-size:100%;">
+                                                <option value="">เขต</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">ตำบล/แขวง
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-9 col-xs-12">
+                                            <select class="form-control" style="font-size:100%;">
+                                                <option value="">กรุงเทพฯ</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                                <option value="">กำแพงเพชร</option>
+                                            </select>
+                                        </div>
+                                        <label class="control-label col-md-1 col-sm-1 col-xs-12"
+                                            for="LName">รหัสไปรษณีย์
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <h3 class=" col-md-4 col-sm-3 col-xs-12">ข้อมูลการติดต่อ</h3><br>
+                                    <div class="ln_solid"></div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                            for="fName">เบอร์โทรศัพท์
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">E-mail
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">Facebook
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">twitter
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <h3 class=" col-md-4 col-sm-3 col-xs-12">รายชื่อสมาชิก</h3><br>
+                                    <div class="ln_solid"></div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                            for="fName">หัวหน้าพรรค
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">รองหัวหน้าพรรค
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">Facebook
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fName">เลขาธิการพรรค
+                                            <span class="required"></span>
+                                        </label>
+                                        <div class="col-md-4 col-sm-3 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="buildyourform2">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="text">สมาชิกพรรค
+                                                <span class="required"></span>
+                                            </label>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <input type="button" value="เพิ่มสมาชิก" class="add" id="add2" />
+                                            <br><br><br>
+                                        </div>
+                                </form>
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                        <button class="btn btn-danger btn-danger2" type="button">ยกเลิก</button>
+                                        <a href="about.html">
+                                            <button type="button" class="btn btn-success btn-success2"
+                                                style="width:30%; ">บันทึก</button>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /page content -->
-              <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content" style="background-color: red; color: white;">
-                <center>
-                    <i class="fa fa-sign-out" style="font-size: 1000%;margin-top: 5%;"></i>
-                    <h1>ทำการยืนยันเพื่อออกจากระบบ</h1>
-                    <button class=" btn-lg btn-dark" type="button" style="margin-top:25px;width: 12%" data-dismiss="modal">ยกเลิก</button>
-                    <a href="../login/login.html">
-                        <button class=" btn-lg btn-success" type="submit" style="margin-top:25px;width: 12%">ยืนยัน</button>
-                    </a>
-                </center>
+                    <!-- Modal content-->
+                    <div class="modal-content" style="background-color: red; color: white;">
+                        <center>
+                            <i class="fa fa-sign-out" style="font-size: 1000%;margin-top: 5%;"></i>
+                            <h1>ทำการยืนยันเพื่อออกจากระบบ</h1>
+                            <button class=" btn-lg btn-dark" type="button" style="margin-top:25px;width: 12%"
+                                data-dismiss="modal">ยกเลิก</button>
+                            <a href="../login/login.html">
+                                <button class=" btn-lg btn-success" type="submit"
+                                    style="margin-top:25px;width: 12%">ยืนยัน</button>
+                            </a>
+                        </center>
+                    </div>
+
+                </div>
             </div>
-
-        </div>
-    </div>
 
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                        Copyright © 2019 
+                    Copyright © 2019
                 </div>
                 <div class="clearfix"></div>
             </footer>
@@ -153,9 +407,85 @@
     <script src="../../vendors/nprogress/nprogress.js"></script>
     <!-- jQuery custom content scroller -->
     <script src="../../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../../vendors/moment/min/moment.min.js"></script>
+    <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        $('#myDatepicker').datetimepicker();
+
+        $('#myDatepicker2').datetimepicker({
+            format: 'DD/MM/YYYY'
+        });
+
+        $('#myDatepicker3').datetimepicker({
+            format: 'hh:mm A'
+        });
+
+        $('#myDatepicker4').datetimepicker({
+            ignoreReadonly: true,
+            allowInputToggle: true
+        });
+
+        $('#datetimepicker6').datetimepicker();
+
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false
+        });
+
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+
+        $(document).ready(function () {
+            $("#add").click(function () {
+                var lastField = $("#buildyourform div:last");
+                var intId = (lastField && lastField.length && lastField.data("idx") + 1) || 1;
+                var fieldWrapper = $("<div class= \"form-group\"> <label class=\"control-label col-md-3 col-sm-3 col-xs-12\">นโยบายพรรค</label><div class= \"fieldwrapper \" id=\"field" + intId + "\"/ > </div>");
+                fieldWrapper.data("idx", intId);
+                var fName = $("<input  type=\"text\" class=\"fieldname\" />");
+                // var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
+                var removeButton = $("<input type=\"button\" class=\"remove\" value=\"ลบ\" />");
+                removeButton.click(function () {
+                    $(this).parent().remove();
+                });
+                fieldWrapper.append(fName);
+                // fieldWrapper.append(fType);
+                fieldWrapper.append(removeButton);
+                $("#buildyourform").append(fieldWrapper);
+            });
+        });
+        $(document).ready(function () {
+            $("#add2").click(function () {
+                var lastField2 = $("#buildyourform2 div:last");
+                var intId2 = (lastField2 && lastField2.length && lastField2.data("idx") + 1) || 1;
+                var fieldWrapper2 = $("<div class= \"form-group\"> <label class=\"control-label col-md-3 col-sm-3 col-xs-12\">สมาชิกพรรค</label><div class= \"fieldwrapper2 \" id=\"field" + intId2 + "\"/ > </div>");
+                fieldWrapper2.data("idx", intId2);
+                var fName = $("<input  type=\"text\" class=\"fieldname\" />");
+                // var fType = $("<select class=\"fieldtype\"><option value=\"checkbox\">Checked</option><option value=\"textbox\">Text</option><option value=\"textarea\">Paragraph</option></select>");
+                var removeButton = $("<input type=\"button\" class=\"remove\" value=\"ลบ\" />");
+                removeButton.click(function () {
+                    $(this).parent().remove();
+                });
+                fieldWrapper2.append(fName);
+                // fieldWrapper.append(fType);
+                fieldWrapper2.append(removeButton);
+                $("#buildyourform2").append(fieldWrapper2);
+            });
+        });
+    </script>
 
     <!-- Custom Theme Scripts -->
     <script src="../../build/js/custom.min.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>
